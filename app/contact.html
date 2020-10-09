@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta charset="UTF-8">
+        <title>YOOFORIC</title>
+        <link rel="stylesheet" href="css/app.min.css">
+        <script src="js/lib.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </head>
+    <body>
+<div class="colorBg">
+    
+<div class="cookiePopup">
+    <div class="cookiePopup__text">This website uses cookies to improve your experience</div>
+    <div class="cookiePopup__btn">
+        <button class="cookieBtn">Accept <img src="images/cookie.png" alt=""></button>
+    </div>
+</div>
+
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+
+            <a href="javascript:;" class="menuBtn d-xxl-none">
+                <span>Menu</span>
+                <svg class="d-xl-none" width="22px" height="9px"><use xlink:href="images/sprite.svg#menu-btn"></use></svg>
+                <svg class="d-none d-xl-block" width="10px" height="6px"><use xlink:href="images/sprite.svg#menu-arrow"></use></svg>
+            </a>
+
+            <div class="header__nav">
+                <div class="close"><svg width="17px" height="17px"><use xlink:href="images/sprite.svg#close"></use></svg></div>
+                <ul>
+                    <li><a href="/catalog.html" class="link">Products</a></li>
+                    <li><a href="/science.html" class="link">Science</a></li>
+                    <li><a href="/media.html" class="link">Media</a></li>
+                    <li><a href="/about.html" class="link">About</a></li>
+                    <li><a href="/contact.html" class="link">Contact</a></li>
+                    <li class="d-xl-none"><a href="/faq.html" class="link">FAQ</a></li>
+
+                    <li class="d-xl-none last"><a href="/account.html" class="link">Account</a></li>
+                </ul>
+            </div>
+
+            <div class="header__right">
+                <a href="#" class="d-none d-xl-block link">Account</a>
+                <a href="/cart.html" class="header__cart">
+                    <div class="count">12</div>
+                    <div class="icon">
+                        <svg class="default" width="23px" height="23px"><use xlink:href="images/sprite.svg#cart"></use></svg>
+                        <svg class="hover" width="23px" height="23px"><use xlink:href="images/sprite.svg#cart-hover"></use></svg>
+                    </div>
+                </a>
+            </div>
+
+            <a href="/" class="header__logo">
+                <img src="images/logo.svg" alt="">
+            </a>
+
+        </div>
+    </div>
+</header>
+
+<div class="cartPopup">
+    <div class="cartPopup__container">
+        <div class="cartPopup__close">
+            <svg width="25px" height="25px"><use xlink:href="images/sprite.svg#close"></use></svg>
+        </div>
+        <div class="cartPopup__title">Your Bag</div>
+        <div class="cartList">
+
+            <a href="#" class="cartItem">
+                <button class="cartItem__remove"><svg width="15px" height="15px"><use xlink:href="images/sprite.svg#close"></use></svg></button>
+                <div class="cartItem__image">
+                    <picture>
+                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                        <source srcset="images/products/gum-tablet.jpg, images/products/gum-tablet@2x.jpg 2x">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img src="images/products/gum-tablet.jpg" alt="My default image">
+                    </picture>
+                </div>
+                <div class="cartItem__content">
+                    <div class="cartItem__title">Hemp oil infused chewing gum</div>
+                    <div class="cartItem__size">10 Pieces</div>
+                    <div class="cartItem__counter">
+                        <div class="countSelector countSelector-cart">
+                            <button class="countSelector__control countSelector__control-minus"><svg width="10px" height="2px"><use xlink:href="images/sprite.svg#minus"></use></svg></button>
+                            <input type="text" name="value" value="1">
+                            <button class="countSelector__control countSelector__control-plus"><svg width="10px" height="10px"><use xlink:href="images/sprite.svg#plus"></use></svg></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cartItem__cost">
+                    $79.99
+                </div>
+            </a>
+
+            <a href="#" class="cartItem">
+                <button class="cartItem__remove"><svg width="15px" height="15px"><use xlink:href="images/sprite.svg#close"></use></svg></button>
+                <div class="cartItem__image">
+                    <picture>
+                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                        <source srcset="images/products/gum-tablet.jpg, images/products/gum-tablet@2x.jpg 2x">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img src="images/products/gum-tablet.jpg" alt="My default image">
+                    </picture>
+                </div>
+                <div class="cartItem__content">
+                    <div class="cartItem__title">Organic hemp oil</div>
+                    <div class="cartItem__size">Lemon</div>
+                    <div class="cartItem__counter">
+                        <div class="countSelector countSelector-cart">
+                            <button class="countSelector__control countSelector__control-minus"><svg width="10px" height="2px"><use xlink:href="images/sprite.svg#minus"></use></svg></button>
+                            <input type="text" name="value" value="1">
+                            <button class="countSelector__control countSelector__control-plus"><svg width="10px" height="10px"><use xlink:href="images/sprite.svg#plus"></use></svg></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cartItem__cost">
+                    $20
+                </div>
+            </a>
+
+            <div class="cartPopup__code">
+                <input type="text" name="discountcode" placeholder="Discount Code">
+                <button class="apply">Apply <svg class="hover" width="22px" height="16px"><use xlink:href="images/sprite.svg#back-arrow"></use></svg></button>
+            </div>
+
+        </div>
+
+        <div class="cartPopup__bottom">
+            <button class="btn btn-dark">Total $99.99</button>
+            <div class="cartPopup__login">Already have account? <a href="#">Log in</a></div>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="defaultPage">
+
+            <h1>We'd Love to Hear<br>From You</h1>
+            <div class="defaultPage__description">We take pride the quality of our formulas and our company's customer service commitment that accompanies every purchase. We differentiate ourselves from competitors by walking our valued customers through any questions or concerns whether it's your first purchase or any purchase thereafter. </div>
+
+            <div class="contacts">
+                <form action="" method="" class="form">
+                    <div class="form__field">
+                        <label>Your name</label>
+                        <input type="text" placeholder="Input text">
+                    </div>
+                    <div class="form__field">
+                        <label>Your e-mail</label>
+                        <input type="text" placeholder="Input text">
+                    </div>
+                    <div class="form__field">
+                        <label>Type your answer here...</label>
+                        <input type="text" placeholder="Input text">
+                    </div>
+                    <div class="form__submit">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+                <div class="contacts__icon">
+                    <svg width="27px" height="29px"><use xlink:href="images/sprite.svg#icon-fu-large"></use></svg>
+                </div>
+                <div class="contacts__text">
+                    <p>PO Box 5508 Old Bridge, NJ 08857</p>
+                    <p><a href="mailto:info@YOOFORICcares.com">info@YOOFORICcares.com</a></p>
+                    <p><a href="tel:1 800 871 7143">1 800 871 7143</a></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+        <footer class="footer footer-noborder">
+            <div class="container">
+                <hr>
+                <div class="row">
+                    <div class="col-12 col-lg-6 footer__social">
+                        <a href="#">Facebook</a><br>
+                        <a href="#">Instagram</a><br>
+                        <a href="#">Twitter</a>
+                    </div>
+                    <div class="col-12 col-lg-6 footer__text">
+                        <p>Testimonials shown are based on actual letters received from many of our satisfied customers. Customer testomonial results may not be typical. Individual results may vary. Individuals shown are paid models and not necessarily YOOFORIC customers.</p>
+                        <p>The statements made regarding these products have not been evaluated by the Food and Drug Administration. The efficacy of these products has not been confirmed by FDA-approved research. These products are not intended to diagnose, treat, cure or prevent any disease. All information presented here is not meant as a substitute for or alternative to information from health care practitioners. Please consult your health care professional about potential interactions or other possible complications before using any product. The Federal Food, Drug, and Cosmetic Act require this notice.</p>
+                    </div>
+                    <div class="col-6 col-md-3 col-xl-6 order-4 order-xl-0 footer__nav">
+                        © 2020 YOOFORIC<br>
+                        <a href="#" class="link">Terms&Condition</a>
+                    </div>
+                    <div class="col-6 col-md-3 col-xl-2 footer__nav">
+                        <a href="/catalog.html" class="link">Products</a><br>
+                        <a href="/science.html" class="link">Science</a>
+                    </div>
+                    <div class="col-6 col-md-3 col-xl-2 footer__nav">
+                        <a href="/media.html" class="link">Media</a><br>
+                        <a href="/about.html" class="link">About</a>
+                    </div>
+                    <div class="col-6 col-md-3 col-xl-2 footer__nav">
+                        <a href="/faq.html" class="link">FAQ</a><br>
+                        <a href="/contact.html" class="link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+<div class="popup centered" id="popupFree14">
+    <div class="popup__container">
+        <a href="#" class="popup__close"></a>
+        <div class="scrollbar-outer">
+            <div class="popup__title">14 day risk-free trial $4.95</div>
+            <div class="popup__textContent">
+                <p>With the Free Trial offer, you'll receive one 30 Piece Box – One Month Supply. We know you will want to continue the cumulative healthy effects of YOOFORIC Hemp Oil Infused Gum so every free trial includes complimentary enrollment in our monthly Subscribe & Save Club.</p>
+                <p>At the end of your trial period, you’ll be billed $79.99 for the supply you have received and are keeping. Thereafter, a new 30 Piece Pack will be sent and billed at the special member discounted price of $79.99 plus FREE SHIPPING every thirty (30) days Cancel any time.</p>
+                <p>Here's more great news - EVERY YOOFORIC monthly supply comes with its own 30-Day Money Back Guarantee so there's no risk to your wallet...only rewards to your health!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup centered" id="popupSubscribe">
+    <div class="popup__container">
+        <a href="#" class="popup__close"></a>
+        <div class="scrollbar-outer">
+            <div class="popup__title">Subscribe and Save (15%) $79.99</div>
+            <div class="popup__textContent">
+                <p>As a Subscribe & Save Member, you never have to worry about running out of your YOOFORIC Hemp Oil Chewing Gum.</p>
+                <p>Once your current supply runs out, you'll be automatically shipped your monthly supply every 30 days at the special Member discounted price of $24.99 plus FREE SHIPPING!<br>You are under no obligation to purchase future shipments and you can cancel at any time.</p>
+                <p>Here's more great news - EVERY YOOFORIC monthly supply comes with its own 30-Day Money Back Guarantee so there's no risk to your wallet...only rewards to your health!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup centered" id="popupTry30">
+    <div class="popup__container">
+        <a href="#" class="popup__close"></a>
+        <div class="scrollbar-outer">
+            <div class="popup__title">Try our products for 30 days, Risk Free!</div>
+            <div class="юpopup__textContent scrollbar-outer">Your purchase is protected by our 30 Day Money Back Guarantee (less S/H), so try it with confidence. Money Back Guarantee instructions are included with all shipments.</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup centered popup-video" id="videoPopup">
+    <div class="popup__container">
+        <a href="#" class="popup__close"></a>
+        <div class="videoPopup__iframe"></div>
+    </div>
+</div>
+    </body>
+</html>
+</div>

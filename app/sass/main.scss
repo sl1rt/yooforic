@@ -1,0 +1,227 @@
+@import "normalize";
+@import "bootstrap";
+@import "fonts";
+@import "jquery.fancybox.min.css";
+
+.clearfix{
+	&:before{
+		content:"";
+		display: table;
+		clear:both;
+	}
+}
+
+h1,h2,h3,h4{
+	font-weight: 500;
+}
+
+svg{
+	fill:none;
+}
+
+input::-moz-focus-inner /*Remove button padding in FF*/
+{
+	border: 0;
+	padding: 0;
+}
+
+input[type='password'],
+input[type='email'],
+input[type='text'],
+input[type='number'],
+input[type='phone']{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+textarea{
+	resize: none !important;
+}
+
+/* ----------------------------------- MIXINS ----------------------------------- */
+
+@mixin flex-block() {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex-grow($grow: 1) {
+	-moz-flex-grow: $grow;
+	-ms-flex-grow: $grow;
+	-webkit-flex-grow: $grow;
+	flex-grow: $grow;
+}
+
+@mixin flex-shrink($shrink: 1) {
+	-moz-flex-shrink: $shrink;
+	-ms-flex-shrink: $shrink;
+	-webkit-flex-shrink: $shrink;
+	flex-shrink: $shrink;
+}
+
+@mixin flex-basis($basis: auto) {
+	-moz-flex-basis: $basis;
+	-ms-flex-basis: $basis;
+	-webkit-flex-basis: $basis;
+	flex-basis: $basis;
+}
+
+@mixin order($order: 0) {
+	-webkit-box-ordinal-group: $order;
+	-moz-box-ordinal-group: $order;
+	-ms-box-ordinal-group: $order;
+	-ms-flex-order: $order;
+	-webkit-order: $order;
+	-moz-order: $order;
+	-ms-order: $order;
+	order: $order;
+}
+
+@mixin flex-direction($direction: row) {
+	-webkit-flex-direction: $direction;
+	-moz-flex-direction: $direction;
+	-ms-flex-direction: $direction;
+	flex-direction: $direction;
+}
+
+@mixin flex-wrap($wrap: nowrap) {
+	-webkit-flex-wrap: $wrap;
+	-moz-flex-wrap: $wrap;
+	-ms-flex-wrap: $wrap;
+	flex-wrap: $wrap;
+}
+
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+	@return $string;
+}
+
+@mixin justify-content($justification) {
+	-webkit-box-pack: $justification;
+	-moz-box-pack: $justification;
+	-ms-flex-pack: str-replace($justification, "flex-", "");
+	-webkit-justify-content: $justification;
+	justify-content: $justification;
+}
+
+@mixin align-items($mode) {
+	-webkit-box-align: $mode;
+	-moz-box-align: $mode;
+	-ms-flex-align: $mode;
+	-webkit-align-items: $mode;
+	align-items: $mode;
+}
+
+@mixin transition($prop...) {
+	-webkit-transition: $prop;
+	-o-transition: $prop;
+	transition: $prop;
+}
+
+@mixin box-shadow($params) {
+	-wabkit-box-shadow: $params;
+	-moz-box-shadow: $params;
+	box-shadow: $params;
+}
+
+@mixin screen-mobile () {
+	@media (max-width:767px) {
+		@content;
+	}
+}
+
+@mixin screen-sm () {
+	@media (min-width:576px) {
+		@content;
+	}
+}
+
+@mixin screen-md {
+	@media (min-width:768px) {
+		@content;
+	}
+}
+
+@mixin screen-lg () {
+	@media (min-width:992px) {
+		@content;
+	}
+}
+
+@mixin screen-xl () {
+	@media (min-width:1152px) {
+		@content;
+	}
+}
+
+@mixin screen-xxl () {
+	@media (min-width:1560px) {
+		@content;
+	}
+}
+
+@mixin percent($prop...) {
+	-ms-flex: 0 0 $prop;
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 $prop;
+	flex: 0 0 $prop;
+	max-width: $prop;
+}
+
+@include screen-xl{
+
+	.col-xl-20p{
+		@include percent(20%);
+	}
+	.col-xl-40p{
+		@include percent(40%);
+	}
+	.col-xl-60p{
+		@include percent(60%);
+	}
+}
+
+*{
+	outline: none;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+	min-width: 320px;
+	font-family: 'Cera', sans-serif;
+}
+
+svg{
+	display: block;
+}
+
+.container{
+	@include screen-xl{
+		max-width: 1580px !important;
+	}
+}
+
+@import "jquery.scrollbar";
+@import "layout";
+@import "btns";
+@import "popups";
+@import "mainPage";
+@import "about";
+@import "catalog";
+@import "productPage";
+@import "form";
+@import "selectric";
+@import "faq";
+@import "contacts";
+@import "science";
+@import "media";
+@import "account";

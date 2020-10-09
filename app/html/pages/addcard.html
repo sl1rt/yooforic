@@ -1,0 +1,53 @@
+@@include('../layouts/head.html')
+<div class="whiteBg whiteBg-fullheight">
+    @@include('../layouts/simple-header.html')
+    <div class="formPage">
+        <div class="container">
+            <a class="formPage__back backArrow" href="javascript:;" onclick="window.history.back()"></a>
+            <h1>Enter your card<br>information</h1>
+            <form action="cardlist.html" method="get" class="form">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form__field">
+                            <label>Card Number</label>
+                            <input type="text" name="email" placeholder="Input text">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form__field">
+                            <label>MM/YY</label>
+                            <input type="text" name="email" placeholder="Input text">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form__field">
+                            <label>SVV</label>
+                            <input type="text" name="email" placeholder="Input text">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form__field">
+                            <label>Card Holder</label>
+                            <input type="text" name="email" placeholder="Input text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__submit">
+                    <input type="submit" value="Add card">
+                </div>
+                <div class="formRemember">
+                    <div class="formRemember__text">Remember card information</div>
+                    <label class="switcher">
+                        <input type="checkbox" name="remember" value="yes">
+                        <div class="switcher__body">
+                            <div class="switcher__trigger"></div>
+                        </div>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+        <footer class="formPage__footer">Need more help?<br> Chat now or call <a href="tel:+1 123 726 7278">+1 123 726 7278</a></footer>
+    </div>
+</div>

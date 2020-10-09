@@ -1,0 +1,44 @@
+@@include('../layouts/head.html')
+<div class="colorBg">
+    @@include('../layouts/header.html')
+
+    <div class="container">
+        <div class="defaultPage">
+
+            <h1>We'd Love to Hear<br>From You</h1>
+            <div class="defaultPage__description">We take pride the quality of our formulas and our company's customer service commitment that accompanies every purchase. We differentiate ourselves from competitors by walking our valued customers through any questions or concerns whether it's your first purchase or any purchase thereafter. </div>
+
+            <div class="contacts">
+                <form action="" method="" class="form">
+                    <div class="form__field">
+                        <label>Your name</label>
+                        <input type="text" placeholder="Input text">
+                    </div>
+                    <div class="form__field">
+                        <label>Your e-mail</label>
+                        <input type="text" placeholder="Input text">
+                    </div>
+                    <div class="form__field">
+                        <label>Type your answer here...</label>
+                        <input type="text" placeholder="Input text">
+                    </div>
+                    <div class="form__submit">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+                <div class="contacts__icon">
+                    <svg width="27px" height="29px"><use xlink:href="images/sprite.svg#icon-fu-large"></use></svg>
+                </div>
+                <div class="contacts__text">
+                    <p>PO Box 5508 Old Bridge, NJ 08857</p>
+                    <p><a href="mailto:info@YOOFORICcares.com">info@YOOFORICcares.com</a></p>
+                    <p><a href="tel:1 800 871 7143">1 800 871 7143</a></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    @@include('../layouts/footer.html', { 'addClass':'footer-noborder' })
+</div>

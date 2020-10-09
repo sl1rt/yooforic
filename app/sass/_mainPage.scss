@@ -1,0 +1,1201 @@
+
+/*
+
+
+Main Banner / Video bg
+
+
+*/
+
+.mainBanner{
+  position: relative;
+  transition: all 0.5s ease 0.2s;
+
+  &.beforeanimate{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  &Insta{
+    display: none;
+    position: absolute;
+    right: 30px;
+    bottom: 32px;
+
+    @include screen-lg{
+      display: block;
+    }
+
+    @include screen-xxl{
+      right: 40px;
+      bottom: 42px;
+    }
+
+    &__image{
+      width: 213px;
+      img{
+        width: 213px;
+        height: 213px;
+        display: block;
+        border-radius: 18px;
+      }
+    }
+
+    &__link{
+      margin-top: 15px;
+      a{
+        @include flex-block;
+        @include align-items(center);
+        @include justify-content(center);
+        font-size: 22px;
+        line-height: 22px;
+        color: #ffffff;
+        font-weight: 500;
+
+        .link{
+          position: relative;
+        }
+
+        .link::before{
+          content:"";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          background: #ffffff;
+          left: 0;
+          bottom: -2px;
+        }
+
+        &:hover .link::before{
+          width: 100%;
+        }
+
+        svg{
+          margin: 0 19px -3px 0;
+        }
+
+        .small{
+          font-weight: 400;
+          font-size: 18px;
+          margin-bottom: -3px;
+        }
+      }
+    }
+
+  }
+
+  &__bg{
+    border-radius: 15px;
+    overflow: hidden;
+
+    @include screen-lg{
+      border-radius: 18px;
+    }
+
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__content{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 23px 20px 0;
+
+    @include screen-md{
+      padding-top: 65px;
+    }
+
+    @include screen-lg{
+      padding-top: 57px;
+    }
+
+  }
+
+  &__title{
+    font-size: 34px;
+    line-height: 38px;
+    color: #FFFFFF;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 245px;
+
+    @include screen-md{
+      font-size: 60px;
+      line-height: 64px;
+      max-width: 610px;
+    }
+  }
+
+  &__link{
+    margin-top: 10px;
+    text-align: center;
+
+    @include screen-md{
+      margin-top: 29px;
+    }
+
+    @include screen-lg{
+      margin-top: 40px;
+    }
+
+    a{
+      font-size: 18px;
+      line-height: 21px;
+      color: #FFFFFF;
+      font-weight: 500;
+      position: relative;
+      display: inline-block;
+
+      &::before{
+        content:"";
+        position: absolute;
+        right: 0;
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        background: #FFFFFF;
+        transition: all 0.3s ease;
+        opacity: 1;
+      }
+
+      @media (hover:hover){
+        &:hover::before{
+          width: 0;
+          right: 0;
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__btn{
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    @include screen-md{
+      bottom: 51px;
+    }
+
+    @include screen-lg{
+      bottom: 60px;
+    }
+
+    @include screen-xxl{
+      bottom: 80px;
+    }
+
+  }
+}
+
+/*
+
+
+Reviews Slider
+
+
+*/
+
+
+.reviewsSlider {
+  overflow: hidden;
+  mix-blend-mode: multiply;
+  position: relative;
+  transition: all 0.5s ease 0.4s;
+
+  @include screen-lg{
+    margin: 18px 0 10px;
+  }
+
+  @include screen-xxl{
+    margin-bottom: 26px;
+  }
+
+  &.beforeanimate{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  .slick-next,
+  .slick-prev {
+    position: absolute;
+    z-index: 50;
+    display: none !important;
+    width: 16px;
+    height: 29px;
+    padding: 0;
+    border:none;
+    background: transparent;
+    top: 50%;
+    margin-top: -15px;
+    cursor: pointer;
+
+    @include screen-md{
+      display: block !important;
+    }
+
+    &.slick-disabled{
+      display: none !important;
+    }
+  }
+
+  .slick-next{
+    right: 0px;
+  }
+
+  .slick-prev{
+    left: 0px;
+    transform: rotate(180deg);
+  }
+
+  .slick-list {
+    overflow: hidden;
+
+    @include screen-md{
+      margin: 0 -30px;
+    }
+
+    @include screen-lg{
+      margin: 0 -14px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    float: left;
+
+    @include screen-md{
+      padding: 0 30px;
+    }
+
+    @include screen-lg{
+      padding: 0 14px;
+    }
+  }
+
+  &__logo {
+    padding-top: 12px;
+
+    @include screen-md{
+      padding-top: 5px;
+      height: 85px;
+      @include flex-block;
+      @include align-items(center);
+      @include justify-content(center);
+    }
+
+    @include screen-xxl{
+      padding-top: 13px;
+      height: 89px;
+    }
+
+    img{
+      transform: scale(0.76);
+      @include screen-md{
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #000;
+    font-style: italic;
+    padding: 0 20px 19px;
+
+    @include screen-md{
+      font-size: 18px;
+      line-height: 22px;
+      padding: 0 16px 24px;
+    }
+  }
+}
+
+
+.reviewsList{
+  opacity: 1;
+
+  &__container{
+    @include screen-xl{
+      margin-bottom: 12px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    margin-top: 41px;
+
+    @include screen-md{
+      @include flex-block;
+      @include align-items(center);
+      @include justify-content(center);
+      border-radius: 18px;
+      padding: 0 10px;
+      height: 220px;
+      margin: 0;
+    }
+
+    @include screen-xl{
+      height: 305px;
+      margin-top: 30px;
+    }
+
+    @include screen-xxl{
+      height: 345px;
+    }
+    
+    &:hover{
+      background: #F6F6FA;
+    }
+  }
+
+  &__logo {
+    @include flex-block;
+    @include align-items(center);
+    @include justify-content(center);
+    height: 60px;
+
+    @include screen-md{
+      padding-top: 5px;
+      height: 85px;
+    }
+
+    @include screen-xxl{
+      padding-top: 0;
+      height: 80px;
+    }
+
+    img{
+      transform: scale(0.76);
+      @include screen-md{
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #000;
+    font-style: italic;
+
+    @include screen-md{
+      font-size: 18px;
+      line-height: 22px;
+      min-height: 88px;
+    }
+
+    @include screen-xl{
+      padding: 0 20px;
+    }
+  }
+}
+
+/*
+
+
+Science And Nature
+
+
+*/
+
+.scienceAndNature{
+  margin: 58px 0 0;
+  opacity: 1;
+  transition: all 0.5s ease 0.6s;
+
+  @include screen-md{
+    margin: 80px 0 0;
+  }
+
+  &.beforeanimate{
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  &__list{
+    margin: 0 -10px;
+    padding: 14px 0 0;
+  }
+
+  &__item{
+    margin-top: 20px;
+    padding: 0 10px;
+    position: relative;
+    @media (hover:hover) {
+      &:hover{
+        &::before{
+          opacity: 1;
+          border-radius: 110px;
+        }
+        img{
+          border-radius: 110px;
+        }
+        .scienceAndNature__text{
+          opacity: 1;
+          transition: all 0.5s ease 0.3s;
+        }
+
+        .btn{
+          background: #ffffff;
+          color: #000;
+          border-color: #000000;
+        }
+      }
+    }
+
+    img{
+      display: block;
+      width: 100%;
+      border-radius: 18px;
+      transition: all 0.3s ease;
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 10px;
+      width: calc(100% - 20px);
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 18px;
+      z-index: 2;
+      transition: all 0.3s ease;
+
+      @media (hover:hover) {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__btn{
+    position: absolute;
+    text-align: center;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  &__text{
+    position: absolute;
+    z-index: 4;
+    height: 124px;
+    top: 50%;
+    margin-top: -66px;
+    width: 228px;
+    left: 50%;
+    margin-left: -114px;
+    @include flex-block;
+    @include align-items(center);
+    @include justify-content(center);
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+
+    @include screen-md{
+      font-size: 22px;
+      line-height: 28px;
+      width: 356px;
+      margin-left: -178px;
+    }
+
+    @media (hover:hover) {
+      opacity: 0;
+    }
+
+  }
+
+}
+
+/*
+
+
+Icons list
+
+
+*/
+
+.iconList{
+  margin: 0 0 37px;
+
+  @include screen-md{
+    margin: 26px -10px 43px;
+  }
+
+  @include screen-lg{
+    margin: 21px -10px 52px
+  }
+
+  @include screen-xxl{
+    margin-bottom: 94px;
+  }
+
+  &__item{
+    margin-top: 32px;
+
+    @include screen-md{
+      @include flex-block;
+      margin-top: 21px;
+      height: 86px;
+    }
+
+    @include screen-lg{
+      height: 106px;
+    }
+
+    @include screen-xxl{
+      height: 86px;
+    }
+
+  }
+
+  &__icon{
+    text-align: center;
+    svg{
+      display: inline-block;
+      width: 56px;
+      height: 56px;
+
+      @include screen-mobile{
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+
+  &__text{
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #000000;
+
+    @include screen-md{
+      font-size: 22px;
+      line-height: 28px;
+      text-align: left;
+      width: calc(100% - 56px);
+      padding: 2px 0 0 20px;
+      margin: 0;
+    }
+
+    @include screen-xxl{
+      width: calc(100% - 136px);
+      padding: 3px 0 0 31px;
+    }
+  }
+}
+
+/*
+
+
+Main page products list
+
+
+*/
+
+.mainProducts{
+  background: #FFFFFF;
+  border-radius: 18px;
+
+  @include screen-md{
+    padding: 0 20px;
+  }
+
+  @include screen-xl{
+    padding: 0 40px;
+  }
+
+  @include screen-xxl{
+    padding: 0 50px;
+  }
+
+  &-inner{
+    background: #F6F6FA;
+    padding-bottom: 29px;
+
+    @include screen-md{
+      padding-bottom: 52px;
+    }
+
+    @include screen-xl{
+      padding-bottom: 58px;
+    }
+
+    @include screen-xxl{
+      padding-bottom: 60px;
+    }
+
+    .mainProducts__info{
+      display: none;
+    }
+
+    .mainProducts__more{
+      display: none;
+    }
+  }
+  
+  &__top{
+    padding: 38px 23px 25px;
+    @include screen-md{
+      @include flex-block;
+      @include justify-content(space-between);
+      padding: 69px 5px 74px;
+    }
+    @include screen-xl{
+      padding: 60px 0 61px;
+    }
+    @include screen-xxl{
+      padding: 69px 0 74px;
+    }
+  }
+
+  &__title{
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    color: #000000;
+
+    @include screen-md{
+      font-size: 44px;
+      line-height: 50px;
+      text-align: left;
+      width: 420px;
+      min-width: 420px;
+      padding-right: 30px;
+    }
+
+    @include screen-lg{
+      padding-right: 10px;
+    }
+  }
+
+  &__info{
+    margin: 30px 0 9px;
+    @include flex-block;
+
+    @include screen-md{
+      margin: 18px 0 0;
+      @include justify-content(space-between);
+      width: 258px;
+    }
+
+    @include screen-lg{
+      margin: 15px 75px 0 0;
+      width: 310px;
+    }
+
+    @include screen-xxl{
+      margin: 20px 55px 0 0;
+      width: 352px;
+    }
+  }
+
+  &__trial,
+  &__delivery{
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    font-style: italic;
+    width: 50%;
+
+    @include screen-md{
+      text-align: left;
+      font-size: 18px;
+      line-height: 22px;
+      width: 112px;
+    }
+
+    @include screen-lg{
+      width: 132px;
+    }
+  }
+
+  &__trial{
+
+    span{
+      display: block;
+      font-size: 18px;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 22px;
+      margin-bottom: 1px;
+
+      @include screen-md{
+        font-size: 22px;
+        line-height: 27px;
+        margin: 0 0 7px;
+      }
+
+      @include screen-lg{
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__delivery{
+
+    svg{
+      display: block;
+      width: 25px;
+      height: 16px;
+      margin: 0 auto 7px;
+
+      @include screen-md{
+        margin: 0 0 7px;
+        width: 33px;
+        height: 25px;
+
+      }
+    }
+  }
+
+  &__list{
+    padding: 0;
+    margin: 0 -10px;
+
+    @include screen-md{
+      overflow: hidden;
+      margin: 0 -20px;
+    }
+
+    @include screen-xl{
+      @include flex-block;
+      padding: 0;
+      margin: 0 -50px;
+    }
+
+    .slick-list{
+      @include screen-md{
+        margin: 0 -10px;
+        padding: 0 126px 0 0;
+      }
+    }
+
+    &>*{
+      @include screen-xl{
+        padding: 0 20px;
+      }
+    }
+
+    .slick-slide{
+      float: left;
+    }
+  }
+
+  &__more{
+    padding: 20px 0 64px;
+    text-align: center;
+
+    @include screen-md{
+      padding: 55px 0 90px;
+    }
+
+    @include screen-xl{
+      padding: 30px 0 63px;
+    }
+
+    @include screen-xxl{
+      padding-bottom: 95px;
+    }
+
+    a{
+      font-size: 22px;
+      line-height: 1;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #000000;
+      position: relative;
+
+      @include screen-md{
+        font-size: 32px;
+      }
+
+      &::before{
+        content:"";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #000000;
+
+        @include screen-md{
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+/*
+
+
+What makes yooforic unique
+
+
+*/
+
+.whatIsYooforic{
+  margin: 20px 0;
+
+  @include screen-md{
+    margin: 40px 0;
+  }
+
+  &__image{
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    height: 400px;
+    overflow: hidden;
+
+    @include screen-md{
+      height: 481px;
+    }
+
+    @include screen-xl{
+      height: 100%;
+    }
+
+    video{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content{
+    margin-top: 20px;
+    border: 2px solid #000000;
+    border-radius: 18px;
+    padding: 36px 14px 4px;
+
+    @include screen-md{
+      padding: 41px 23px 0;
+    }
+
+    @include screen-xl{
+      margin-top: 0;
+      padding: 28px 38px 8px;
+    }
+
+    @include screen-xxl{
+      padding: 41px 48px 39px;
+    }
+  }
+
+  &__title{
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+    color: #000000;
+
+    @include screen-md{
+      text-align: left;
+      font-size: 44px;
+      line-height: 50px;
+      max-width: 442px;
+    }
+  }
+
+  &__list{
+    margin-top: 22px;
+
+    @include screen-md{
+      columns: 2;
+      margin-top: 142px;
+    }
+
+    @include screen-xl{
+      columns: 1;
+      margin-top: 114px;
+    }
+
+    @include screen-xxl{
+      columns: 2;
+      margin-top: 154px;
+      column-gap: 40px;
+    }
+
+  }
+
+  &__item{
+    @include flex-block;
+    @include justify-content(space-between);
+    @include align-items(center);
+    border-bottom: 2px solid #000000;
+    height: 46px;
+
+    @include screen-md{
+      height: 65px;
+    }
+
+    &:last-child{
+      border-bottom: none;
+      height: 40px;
+
+      @include screen-md{
+        border-bottom: 2px solid #000000;
+        height: 65px;
+      }
+    }
+
+    &:nth-child(3n){
+      @include screen-md{
+        border-bottom: none;
+        height: 63px;
+      }
+
+      @include screen-xxl{
+        height: 65px;
+        border-bottom: 2px solid #000000;
+      }
+    }
+  }
+
+  &__text{
+    font-size: 20px;
+    line-height: 35px;
+    color: #000000;
+
+    @include screen-md{
+      font-size: 28px;
+      line-height: 35px;
+    }
+  }
+
+  &__icon{
+    .icon{
+      &-vegan{
+        width: 17px;
+        height: 28px;
+        @include screen-md{
+          width: 17px;
+          height: 37px;
+          margin: 3px 9px 0 0;
+        }
+      }
+      &-organic{
+        width: 27px;
+        height: 33px;
+        margin: 0 -7px 0 0;
+        @include screen-md{
+          width: 37px;
+          height: 41px;
+          margin: 1px -2px 0 0;
+        }
+      }
+      &-nohight{
+        width: 20px;
+        height: 20px;
+        @include screen-md{
+          width: 27px;
+          height: 27px;
+          margin: 2px 6px 0 0;
+        }
+      }
+      &-sugarfree{
+        width: 21px;
+        height: 20px;
+        @include screen-md{
+          width: 28px;
+          height: 27px;
+          margin: 4px 1px 0 0;
+        }
+      }
+      &-glutenfree{
+        width: 28px;
+        height: 36px;
+        margin: 0 -4px 0 0;
+        @include screen-md{
+          width: 39px;
+          height: 45px;
+          margin: 0px -3px 0 0;
+        }
+      }
+      &-nopreservatives{
+        width: 22px;
+        height: 19px;
+        margin: 0 -2px 0 0;
+        @include screen-md{
+          width: 30px;
+          height: 25px;
+          margin: 0px 3px 0 0;
+        }
+      }
+    }
+  }
+
+}
+
+/*
+
+
+Join Yooforic
+
+
+*/
+
+.joinYooforic{
+  margin: 60px -12px 20px;
+  overflow: hidden;
+  padding: 0 12px;
+
+  @include screen-md{
+    margin: 80px -20px 20px;
+    padding: 0 20px;
+  }
+
+  @include screen-xl{
+    margin: 80px 0 20px;
+    padding: 0;
+  }
+
+  &__slider{
+    margin: 33px 0 0;
+    padding-right: 102px;
+    overflow: visible;
+    position: relative;
+
+    @include screen-md{
+      margin: 36px 0 0;
+    }
+
+    @include screen-xl{
+      padding: 0;
+    }
+
+    .slick-list{
+      overflow: visible !important;
+      margin: 0 -5px;
+
+      @include screen-md{
+        margin: 0 -10px;
+      }
+    }
+
+    .slick-track{
+      @include flex-block;
+    }
+
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      z-index: 50;
+      display: none !important;
+      width: 16px;
+      height: 29px;
+      padding: 0;
+      border:none;
+      background: transparent;
+      top: 50%;
+      margin-top: -19px;
+      cursor: pointer;
+
+      @include screen-md{
+        display: block !important;
+      }
+
+      &.slick-disabled{
+        display: none !important;
+      }
+    }
+
+    .slick-next{
+      right: 19px;
+    }
+
+    .slick-prev{
+      left: 19px;
+      transform: rotate(180deg);
+    }
+
+  }
+
+  &__item{
+    padding: 0 5px;
+
+    @include screen-md{
+      padding: 0 10px;
+    }
+
+    img{
+      display: block;
+      width: 100%;
+      border-radius: 18px;
+    }
+  }
+
+  &__content{
+    min-height: 100%;
+    @include flex-block;
+    width: 100%;
+    @include align-items(center);
+    padding: 20px;
+    border-radius: 18px;
+    color: #000000;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 14px;
+    transition: all 0.3s ease;
+
+    @include screen-md{
+      padding: 40px;
+      font-size: 18px;
+    }
+    
+    &-blue{
+      background: #9ECBFF;
+    }
+
+    &:hover{
+      border-radius: 50px;
+      @include screen-md{
+        border-radius: 110px;
+      }
+    }
+  }
+
+  &__text{
+    font-style: italic;
+  }
+
+  &__author{
+    font-weight: 500;
+    margin-top: 22px;
+    @include screen-md{
+      margin-top: 52px;
+    }
+    @include screen-xl{
+      margin-top: 52px;
+    }
+  }
+
+}

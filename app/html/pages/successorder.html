@@ -1,0 +1,23 @@
+@@include('../layouts/head.html')
+<div class="whiteBg whiteBg-fullheight">
+    @@include('../layouts/simple-header.html')
+    <div class="formPage">
+        <div class="container">
+            <h1>Successful payment</h1>
+            <div class="formPage__description">Thanks for your order</div>
+            <div class="formPage__image">
+                <picture>
+                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                    <source srcset="images/success.jpg, images/success@2x.jpg 2x">
+                    <!--[if IE 9]></video><![endif]-->
+                    <img src="images/media/success.jpg" alt="My default image">
+                </picture>
+            </div>
+            <div class="formPage__history">
+                <a href="account.html" class="link">Orders History</a>
+            </div>
+        </div>
+
+        <footer class="formPage__footer">Need more help?<br> Chat now or call <a href="tel:+1 123 726 7278">+1 123 726 7278</a></footer>
+    </div>
+</div>

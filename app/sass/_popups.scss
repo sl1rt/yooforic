@@ -1,0 +1,586 @@
+.popup{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(7px);
+
+  @include screen-md{
+    padding: 0 40px;
+  }
+
+  &-video{
+    padding: 40px;
+    .popup__container{
+      max-width: 100%;
+      background: transparent;
+      padding: 0;
+      width: 80%;
+      height: 58.63453815261044vw;
+    }
+
+    .popup__close{
+      right: -49px;
+      top: 0;
+      width: 33px;
+      height: 33px;
+      background-size: 33px 33px;
+    }
+
+    iframe{
+      border-radius: 18px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+  }
+
+  &.centered{
+    .popup__container{
+      @include screen-md{
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__container{
+    width: 100%;
+    position: relative;
+    background: #ffffff;
+    margin: 0 auto;
+    height: 100%;
+    padding: 43px 20px 30px;
+
+    @include screen-md{
+      max-width: 770px;
+      height: auto;
+      max-height: 80vh;
+      padding: 77px 95px 54px;
+      border-radius: 18px;
+    }
+
+    @include screen-xl{
+      padding: 87px 115px 72px;
+    }
+  }
+
+  &__close{
+    position: absolute;
+    top: 13px;
+    right: 12px;
+    cursor: pointer;
+    background: url(../images/icons/close.svg) no-repeat center center / 17px 17px;
+    width: 17px;
+    height: 17px;
+
+    @include screen-md{
+      top: 30px;
+      right: 30px;
+      width: 21px;
+      height: 21px;
+      background-size: 21px 21px;
+    }
+  }
+
+  &__title{
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 34px;
+    color: #000000;
+
+    @include screen-md{
+      font-size: 36px;
+      line-height: 41px;
+    }
+  }
+
+  .scrollbar-outer{
+    max-height: 70vh;
+
+    @include screen-md{
+      max-height: calc(80vh - 131px);
+    }
+
+    @include screen-xl{
+      max-height: calc(80vh - 159px);
+    }
+  }
+
+  &__textContent{
+    font-size: 15px;
+    line-height: 1.3;
+    color: #000000;
+    opacity: 0.95;
+
+    @include screen-md{
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    p{
+      margin: 1.2em 0;
+    }
+  }
+
+  &__form{
+    margin-top: 27px;
+    @include screen-md{
+      margin-top: 32px;
+    }
+
+    textarea,
+    input[type='text'],
+    input[type='password'],
+    input[type='email']{
+      display: block;
+      margin: 2px auto 0;
+      border:none;
+      padding: 0 11px;
+      height: 45px;
+      background: transparent;
+      font-size: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-radius: 10px;
+      text-align: center;
+      color: rgba(255,255,255,0.4);
+      max-width: 100%;
+
+      @include screen-md{
+        font-size: 34px;
+        margin: 8px auto 0;
+        height: 55px;
+      }
+
+      &::placeholder{
+        color: #FFFFFF;
+      }
+      &:focus{
+        background: rgba(255,255,255,0.2);
+        &::placeholder{
+          color: rgba(255,255,255,0.3);
+        }
+      }
+    }
+    textarea{
+      line-height: 1.12;
+      padding: 12px 0 9px;
+      height: 45px;
+      overflow: hidden;
+      @include screen-md{
+        height: 55px;
+        padding: 9px 0 8px;
+      }
+    }
+  }
+
+  &__bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  hr{
+    border:none;
+    width: 100%;
+    height: 1px;
+    display: block;
+    background: rgba(255,255,255,0.3);
+    margin: 19px auto 31px;
+    max-width: 560px;
+    @include screen-md{
+      margin: 25px auto 33px;
+    }
+  }
+
+  &__subtitle{
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.12;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    @include screen-md{
+      font-size: 34px;
+    }
+  }
+}
+
+
+.cartPopup{
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(7px);
+  right: -100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 120;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.5s, right 0s ease 0.8s;
+
+  &.show{
+    right: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+    .cartPopup__container{
+      right: 0;
+      transition: right 0.3s ease 0.3s;
+    }
+  }
+
+  &__container{
+    width: 100%;
+    background: #FFFFFF;
+    position: relative;
+    height: 100%;
+    padding: 0 12px;
+    right: -100vw;
+    transition: right 0.5s ease;
+
+    @include screen-md{
+      padding: 20px;
+    }
+
+    @include screen-xl{
+      width: 609px;
+      margin: 0 0 0 auto;
+      border-left: 2px solid #000000;
+      padding: 0;
+      right: -609px;
+    }
+  }
+
+  &__close{
+    position: absolute;
+    right: 13px;
+    top: 26px;
+    cursor: pointer;
+
+    @include screen-md{
+      right: 19px;
+      top: 50px;
+    }
+
+    @include screen-xl{
+      right: 52px;
+      top: 47px;
+    }
+
+    svg{
+      display: block;
+      width: 19px;
+      height: 19px;
+
+      @include screen-md{
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  &__title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 32px;
+    padding: 18px 0 4px;
+
+    @include screen-md{
+      text-align: left;
+      font-size: 44px;
+      line-height: 50px;
+      border-bottom: 2px solid #000000;
+      padding: 16px 0 37px;
+    }
+
+    @include screen-xl{
+      padding: 32px 46px 37px;
+    }
+  }
+
+  &__bottom{
+    padding: 17px 12px 22px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    border-top: 2px solid #000000;
+    z-index: 5;
+
+    @include screen-md{
+      left: 20px;
+      width: calc(100% - 40px);
+      padding: 20px 12px 22px;
+    }
+
+    @include screen-xl{
+      left: 0;
+      width: 100%;
+      padding: 20px 48px 32px 45px;
+    }
+
+    .btn-dark{
+      width: 100%;
+
+      @include screen-md{
+        max-width: 480px;
+        margin: 0 auto;
+        display: block;
+      }
+
+      @include screen-xl{
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__login{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+
+    @include screen-md{
+      margin-top: 17px;
+    }
+
+    a{
+      text-decoration: underline;
+      color: #000;
+    }
+  }
+
+  &__code{
+    margin-top: 45px;
+    position: relative;
+    max-width: 354px;
+
+    &.success{
+      .apply{
+        display: none;
+      }
+      input{
+        background: url(../images/icons/checkbox.svg) no-repeat right calc(100% - 14px) / 16px auto;
+      }
+    }
+
+    .apply{
+      padding: 0 0 8px;
+      margin: 0;
+      border:none;
+      width: 90px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include flex-block;
+      @include align-items(center);
+      @include justify-content(space-between);
+      height: 41px;
+      background: transparent;
+      font-size: 22px;
+      line-height: 27px;
+      font-weight: 500;
+      z-index: 2;
+      cursor: pointer;
+
+      svg{
+        transform: rotate(180deg);
+        margin-top: 2px;
+      }
+    }
+
+    input{
+      height: 41px;
+      border:none;
+      border-bottom: 2px solid #000000;
+      font-size: 22px;
+      width: 100%;
+      padding: 0 0 5px;
+
+      &::placeholder{
+        color: #000;
+      }
+    }
+  }
+
+}
+
+.cartList{
+  padding: 0 0 50px;
+  overflow: auto;
+  height: calc(100% - 54px - 142px);
+
+  @include screen-md{
+    height: calc(100% - 145px - 142px);
+  }
+
+  @include screen-xl{
+    padding: 0 48px 50px 45px;
+  }
+}
+
+.cartItem{
+  padding: 30px 0;
+  position: relative;
+  border-bottom: 1px solid #E2E2EC;
+  display: block;
+  text-decoration: none;
+  color: #000000;
+
+  @include screen-md{
+    @include flex-block;
+    @include align-items(center);
+    padding: 25px 0 27px;
+  }
+
+  &:hover{
+    .cartItem__remove{
+      opacity: 1;
+    }
+
+    .cartItem__title{
+      border-bottom: 2px solid #000000;
+      display: inline;
+    }
+  }
+
+  &__remove{
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border:none;
+    cursor: pointer;
+    position: absolute;
+    transition: all 0.3s ease;
+
+    @include screen-md{
+      top: 36px;
+      left: 1px;
+    }
+
+    @include screen-xl{
+      left: -36px;
+      opacity: 0;
+    }
+  }
+
+  &__image{
+    width: 110px;
+    height: 110px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 18px;
+
+    @include screen-md{
+      margin: 0 0 0 42px;
+    }
+
+    @include screen-xl{
+      margin: 0;
+    }
+
+    img{
+      display: block;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;;
+    }
+  }
+
+  &__content{
+    padding: 17px 20px 0;
+    text-align: center;
+
+    @include screen-md{
+      width: 330px;
+      text-align: left;
+      padding: 0 0 0 36px;
+    }
+
+    @include screen-xl{
+      padding: 0 0 0 24px;
+    }
+  }
+
+  &__title{
+    font-size: 20px;
+    line-height: 25px;
+    max-width: 226px;
+    margin: 0 auto;
+
+    @include screen-md{
+      margin: 0;
+      max-width: 100%;
+      font-size: 22px;
+      line-height: 28px;
+    }
+  }
+
+  &__size{
+    font-size: 15px;
+    line-height: 1.3;
+    margin: 11px 0 22px;
+
+    @include screen-md{
+      font-style: italic;
+      font-size: 18px;
+      line-height: 22px;
+      margin: 4px 0 10px;
+    }
+  }
+
+  .countSelector{
+    display: inline-block;
+    width: 140px;
+
+    @include screen-md{
+      height: 35px;
+      width: 120px;
+    }
+
+    .countSelector__control {
+      width: 48px;
+
+      @include screen-md{
+        width: 43px;
+      }
+    }
+  }
+
+  &__cost{
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 500;
+    margin-top: 20px;
+    text-align: center;
+
+    @include screen-md{
+      min-width: 105px;
+      position: absolute;
+      text-align: left;
+      right: 0;
+      top: 26px;
+      margin: 0;
+    }
+
+    @include screen-xl{
+      right: -10px;
+      top: 27px;
+      margin: 0;
+    }
+  }
+
+}

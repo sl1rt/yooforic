@@ -1,0 +1,86 @@
+@@include('../layouts/head.html')
+<div class="whiteBg whiteBg-fullheight">
+    @@include('../layouts/simple-header.html')
+    <div class="formPage">
+        <div class="container">
+            <a class="formPage__back backArrow" href="javascript:;" onclick="window.history.back()"></a>
+            <h1>Checkout</h1>
+            <form action="addcard.html" method="get" class="form">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form__field">
+                            <label>First Name</label>
+                            <input type="text" name="email" placeholder="Input text">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form__field">
+                            <label>Last Name</label>
+                            <input type="text" name="email" placeholder="Input text">
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form__field error">
+                            <label>E-mail</label>
+                            <input type="text" name="email" placeholder="Input text">
+                            <div class="form__error">This email is already registered</div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form__field">
+                            <label>Phone Number</label>
+                            <input type="text" name="email" placeholder="Input text">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form__field">
+                            <label>Address</label>
+                            <input type="text" name="email" placeholder="Input text">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form__field">
+                            <label>Apartment, suite, ect. <span class="d-none d-sm-inline">&nbsp;(optional)</span></label>
+                            <input type="text" name="email" placeholder="Input text">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form__field">
+                            <label>City</label>
+                            <input type="text" name="email" placeholder="Input text">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form__field">
+                            <label>State</label>
+                            <input type="text" name="email" placeholder="Input text">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form__field">
+                            <label>Zip Code</label>
+                            <input type="text" name="email" placeholder="Input text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formDeliverycost">
+                    <div class="formDeliverycost__item">Shipping $12</div>
+                    <div class="formDeliverycost__item">Sales Tax $0.00</div>
+                </div>
+
+                <div class="form__submit">
+                    <input type="submit" value="Total $12">
+                </div>
+
+                <div class="form__terms">
+                    Message and data rates may apply. By proceeding, I accept the <a href="#">Services Terms</a> and confirm that I have read <a href="#">Privacy Policy</a>.
+                </div>
+
+            </form>
+        </div>
+
+        <footer class="formPage__footer">Need more help?<br> Chat now or call <a href="tel:+1 123 726 7278">+1 123 726 7278</a></footer>
+    </div>
+</div>

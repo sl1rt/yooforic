@@ -1,0 +1,40 @@
+@@include('../layouts/head.html')
+<div class="whiteBg whiteBg-fullheight">
+    @@include('../layouts/simple-header.html')
+    <div class="formPage">
+        <div class="container">
+            <a class="formPage__back backArrow" href="javascript:;" onclick="window.history.back()"></a>
+            <h1>Log in</h1>
+            <form action="checkout.html" method="get" class="form">
+                <div class="form__field">
+                    <label>E-mail</label>
+                    <input type="text" name="email" placeholder="Input text">
+                </div>
+                <div class="form__field">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="">
+                </div>
+                <div class="form__link">
+                    <a href="forgot.html">Forgot your password?</a>
+                </div>
+                <div class="form__submit">
+                    <input type="submit" value="Continue">
+                </div>
+                <div class="formRemember">
+                    <div class="formRemember__text">Remember me</div>
+                    <label class="switcher">
+                        <input type="checkbox" name="remember" value="yes">
+                        <div class="switcher__body">
+                            <div class="switcher__trigger"></div>
+                        </div>
+                    </label>
+                </div>
+                <div class="form__terms">
+                    Message and data rates may apply. By proceeding, I accept the <a href="#">Services Terms</a> and confirm that I have read <a href="#">Privacy Policy</a>.
+                </div>
+            </form>
+        </div>
+
+        <footer class="formPage__footer">Need more help?<br> Chat now or call <a href="tel:+1 123 726 7278">+1 123 726 7278</a></footer>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+@@include('../layouts/head.html')
+<div class="whiteBg whiteBg-fullheight">
+    @@include('../layouts/simple-header.html')
+    <div class="formPage">
+        <div class="container">
+            <a class="formPage__back backArrow" href="javascript:;" onclick="window.history.back()"></a>
+            <h1>Enter your card<br>information</h1>
+            <form action="successorder.html" method="get" class="form">
+
+                <div class="form__field">
+                    <button class="form__card form__card-mastercard">MasterCard 5778</button>
+                </div>
+
+                <div class="form__field">
+                    <a href="addcard.html" class="form__addcard">
+                        <span>+</span> Add card
+                    </a>
+                </div>
+
+                <div class="form__submit">
+                    <input type="submit" value="Complite order">
+                </div>
+                <div class="formRemember">
+                    <div class="formRemember__text">Remember card information</div>
+                    <label class="switcher">
+                        <input type="checkbox" name="remember" value="yes">
+                        <div class="switcher__body">
+                            <div class="switcher__trigger"></div>
+                        </div>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+        <footer class="formPage__footer">Need more help?<br> Chat now or call <a href="tel:+1 123 726 7278">+1 123 726 7278</a></footer>
+    </div>
+</div>

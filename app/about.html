@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta charset="UTF-8">
+        <title>YOOFORIC</title>
+        <link rel="stylesheet" href="css/app.min.css">
+        <script src="js/lib.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </head>
+    <body>
+<div class="colorBg">
+    
+<div class="cookiePopup">
+    <div class="cookiePopup__text">This website uses cookies to improve your experience</div>
+    <div class="cookiePopup__btn">
+        <button class="cookieBtn">Accept <img src="images/cookie.png" alt=""></button>
+    </div>
+</div>
+
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+
+            <a href="javascript:;" class="menuBtn d-xxl-none">
+                <span>Menu</span>
+                <svg class="d-xl-none" width="22px" height="9px"><use xlink:href="images/sprite.svg#menu-btn"></use></svg>
+                <svg class="d-none d-xl-block" width="10px" height="6px"><use xlink:href="images/sprite.svg#menu-arrow"></use></svg>
+            </a>
+
+            <div class="header__nav">
+                <div class="close"><svg width="17px" height="17px"><use xlink:href="images/sprite.svg#close"></use></svg></div>
+                <ul>
+                    <li><a href="/catalog.html" class="link">Products</a></li>
+                    <li><a href="/science.html" class="link">Science</a></li>
+                    <li><a href="/media.html" class="link">Media</a></li>
+                    <li><a href="/about.html" class="link">About</a></li>
+                    <li><a href="/contact.html" class="link">Contact</a></li>
+                    <li class="d-xl-none"><a href="/faq.html" class="link">FAQ</a></li>
+
+                    <li class="d-xl-none last"><a href="/account.html" class="link">Account</a></li>
+                </ul>
+            </div>
+
+            <div class="header__right">
+                <a href="#" class="d-none d-xl-block link">Account</a>
+                <a href="/cart.html" class="header__cart">
+                    <div class="count">12</div>
+                    <div class="icon">
+                        <svg class="default" width="23px" height="23px"><use xlink:href="images/sprite.svg#cart"></use></svg>
+                        <svg class="hover" width="23px" height="23px"><use xlink:href="images/sprite.svg#cart-hover"></use></svg>
+                    </div>
+                </a>
+            </div>
+
+            <a href="/" class="header__logo">
+                <img src="images/logo.svg" alt="">
+            </a>
+
+        </div>
+    </div>
+</header>
+
+<div class="cartPopup">
+    <div class="cartPopup__container">
+        <div class="cartPopup__close">
+            <svg width="25px" height="25px"><use xlink:href="images/sprite.svg#close"></use></svg>
+        </div>
+        <div class="cartPopup__title">Your Bag</div>
+        <div class="cartList">
+
+            <a href="#" class="cartItem">
+                <button class="cartItem__remove"><svg width="15px" height="15px"><use xlink:href="images/sprite.svg#close"></use></svg></button>
+                <div class="cartItem__image">
+                    <picture>
+                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                        <source srcset="images/products/gum-tablet.jpg, images/products/gum-tablet@2x.jpg 2x">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img src="images/products/gum-tablet.jpg" alt="My default image">
+                    </picture>
+                </div>
+                <div class="cartItem__content">
+                    <div class="cartItem__title">Hemp oil infused chewing gum</div>
+                    <div class="cartItem__size">10 Pieces</div>
+                    <div class="cartItem__counter">
+                        <div class="countSelector countSelector-cart">
+                            <button class="countSelector__control countSelector__control-minus"><svg width="10px" height="2px"><use xlink:href="images/sprite.svg#minus"></use></svg></button>
+                            <input type="text" name="value" value="1">
+                            <button class="countSelector__control countSelector__control-plus"><svg width="10px" height="10px"><use xlink:href="images/sprite.svg#plus"></use></svg></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cartItem__cost">
+                    $79.99
+                </div>
+            </a>
+
+            <a href="#" class="cartItem">
+                <button class="cartItem__remove"><svg width="15px" height="15px"><use xlink:href="images/sprite.svg#close"></use></svg></button>
+                <div class="cartItem__image">
+                    <picture>
+                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                        <source srcset="images/products/gum-tablet.jpg, images/products/gum-tablet@2x.jpg 2x">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img src="images/products/gum-tablet.jpg" alt="My default image">
+                    </picture>
+                </div>
+                <div class="cartItem__content">
+                    <div class="cartItem__title">Organic hemp oil</div>
+                    <div class="cartItem__size">Lemon</div>
+                    <div class="cartItem__counter">
+                        <div class="countSelector countSelector-cart">
+                            <button class="countSelector__control countSelector__control-minus"><svg width="10px" height="2px"><use xlink:href="images/sprite.svg#minus"></use></svg></button>
+                            <input type="text" name="value" value="1">
+                            <button class="countSelector__control countSelector__control-plus"><svg width="10px" height="10px"><use xlink:href="images/sprite.svg#plus"></use></svg></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cartItem__cost">
+                    $20
+                </div>
+            </a>
+
+            <div class="cartPopup__code">
+                <input type="text" name="discountcode" placeholder="Discount Code">
+                <button class="apply">Apply <svg class="hover" width="22px" height="16px"><use xlink:href="images/sprite.svg#back-arrow"></use></svg></button>
+            </div>
+
+        </div>
+
+        <div class="cartPopup__bottom">
+            <button class="btn btn-dark">Total $99.99</button>
+            <div class="cartPopup__login">Already have account? <a href="#">Log in</a></div>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="defaultPage">
+
+            <div class="about">
+                <div class="defaultPageMain">
+                    <div class="row">
+                        <div class="col-12 col-xl-5">
+                            <div class="defaultPageMain__image">
+                                <picture>
+                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                    <source srcset="images/about/about-xxl.jpg, images/about/about-xxl@2x.jpg 2x" media="(min-width: 1660px)">
+                                    <source srcset="images/about/about-desktop.jpg, images/about/about-desktop@2x.jpg 2x" media="(min-width: 1152px)">
+                                    <source srcset="images/about/about-tablet.jpg, images/about/about-tablet@2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="images/about/about-mobile.jpg, images/about/about-mobile@2x.jpg 2x" media="(max-width: 767px)">
+                                    <!--[if IE 9]></video><![endif]-->
+                                    <img src="images/about/about-desktop.jpg" alt="My default image">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-1"></div>
+                        <div class="col-12 col-xl-6 d-xl-flex align-items-center">
+                            <div class="defaultPageMain__content">
+                                <h1>From plant to finished good, Yooforic creates high grade hemp-based formulations supported by science and innovation. </h1>
+                                <div class="defaultPageMain__link"><a href="#" class="link">Watch video</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="titleTextBlock">
+                    <div class="row">
+                        <div class="col-12 col-xxl-6">
+                            <div class="titleTextBlock__title">The hemp products<br>brand machine</div>
+                        </div>
+                        <div class="col-12 col-xxl-6">
+                            <div class="titleTextBlock__text">
+                                <p>Designed to meet consumer demand in this rapidly growing market, Yooforic’s proprietary brand machine and its direct-to-consumer demand marketing engine poise this company to be an industry leader in the branded hemp product space.</p>
+                                <p>Yooforic is building a fully integrated, multi-faceted Hemp products brand company. From plant to finished good, Yooforic creates high grade hemp-based formulations supported by science and innovation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="planToProduct">
+                    <div class="row">
+
+                        <div class="col-12 col-xxl-6">
+                            <div class="planToProduct__content">
+                                <div class="planToProduct__title">Plant to product</div>
+                                <div class="planToProduct__text">Yooforic is a fully integrated hemp business. From seed to counter, our fully integrated hemp business helps us promote in-demand hemp oil infused products that continue to fuel the direct response marketing engine</div>
+
+                                <div class="planToProduct__list row">
+                                    <div class="planToProduct__item col-12 col-md-6">
+                                        Dutchess county<br><span>New York</span>
+                                    </div>
+                                    <div class="planToProduct__item col-12 col-md-6">
+                                        100 acres<br><span>Harvesting</span>
+                                    </div>
+                                    <div class="planToProduct__item col-12 col-md-6">
+                                        600k lbs per day<br><span>Drying and Curing</span>
+                                    </div>
+                                    <div class="planToProduct__item col-12 col-md-6">
+                                        Ectraction<br><span>World-Class Facilitie</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-xxl-6">
+                            <div class="planToProduct__image">
+                                <picture>
+                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                    <source srcset="images/plant/plant-xxl.jpg, images/plant/plant-xxl@2x.jpg 2x" media="(min-width: 1660px)">
+                                    <source srcset="images/plant/plant-desktop.jpg, images/plant/plant-desktop@2x.jpg 2x" media="(min-width: 1152px)">
+                                    <source srcset="images/plant/plant-tablet.jpg, images/plant/plant-tablet@2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="images/plant/plant-mobile.jpg, images/plant/plant-mobile@2x.jpg 2x" media="(max-width: 767px)">
+                                    <!--[if IE 9]></video><![endif]-->
+                                    <img src="images/plant/plant-desktop.jpg" alt="My default image">
+                                </picture>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                
+<div class="iconList row">
+
+    <div class="iconList__item col-6 col-lg-4">
+        <div class="iconList__icon">
+            <svg width="56px" height="56px"><use xlink:href="images/sprite.svg#icon-stars"></use></svg>
+        </div>
+        <div class="iconList__text">Superior Innovative Patented Time Release Formula</div>
+    </div>
+
+    <div class="iconList__item col-6 col-lg-4">
+        <div class="iconList__icon">
+            <svg width="56px" height="56px"><use xlink:href="images/sprite.svg#icon-ok"></use></svg>
+        </div>
+        <div class="iconList__text">No High! Yooforic Contains Less Than 0.1% THC</div>
+    </div>
+
+    <div class="iconList__item col-6 col-lg-4">
+        <div class="iconList__icon">
+            <svg width="56px" height="56px"><use xlink:href="images/sprite.svg#icon-fu"></use></svg>
+        </div>
+        <div class="iconList__text">Best Clinically Verified Absorption Rate 84%</div>
+    </div>
+
+    <div class="iconList__item col-6 col-lg-4">
+        <div class="iconList__icon">
+            <svg width="56px" height="56px"><use xlink:href="images/sprite.svg#icon-grass"></use></svg>
+        </div>
+        <div class="iconList__text">Maximum Absorption Without Waste</div>
+    </div>
+
+    <div class="iconList__item col-6 col-lg-4">
+        <div class="iconList__icon">
+            <svg width="56px" height="56px"><use xlink:href="images/sprite.svg#icon-peace"></use></svg>
+        </div>
+        <div class="iconList__text">Enjoy the Healthy Benefits of Mastication</div>
+    </div>
+
+    <div class="iconList__item col-6 col-lg-4">
+        <div class="iconList__icon">
+            <svg width="56px" height="56px"><use xlink:href="images/sprite.svg#icon-heart"></use></svg>
+        </div>
+        <div class="iconList__text">Sugar-Free Chewing Gum</div>
+    </div>
+
+</div>
+
+
+                <hr>
+
+                <div class="imageTextBlock">
+                    <div class="row">
+                        <div class="col-12 col-xl-5">
+                            <div class="imageTextBlock__image">
+                                <picture>
+                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                    <source srcset="images/about/about2-xxl.jpg, images/about/about2-xxl@2x.jpg 2x" media="(min-width: 1660px)">
+                                    <source srcset="images/about/about2-desktop.jpg, images/about/about2-desktop@2x.jpg 2x" media="(min-width: 1152px)">
+                                    <source srcset="images/about/about2-tablet.jpg, images/about/about2-tablet@2x.jpg 2x" media="(min-width: 768px)">
+                                    <source srcset="images/about/about2-mobile.jpg, images/about/about2-mobile@2x.jpg 2x" media="(max-width: 767px)">
+                                    <!--[if IE 9]></video><![endif]-->
+                                    <img src="images/about/about2-desktop.jpg" alt="My default image">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-1"></div>
+                        <div class="col-12 col-xl-6 d-xl-flex align-items-center">
+                            <div class="imageTextBlock__content">
+                                <div class="imageTextBlock__title">The hemp products<br>brand machine</div>
+                                <div class="imageTextBlock__text">
+                                    <p>Yooforic is building a fully integrated, multi-faceted Hemp products brand company. From plant to finished good, Yooforic creates high grade hemp-based formulations supported by science and innovation. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+        <footer class="footer footer-noborder">
+            <div class="container">
+                <hr>
+                <div class="row">
+                    <div class="col-12 col-lg-6 footer__social">
+                        <a href="#">Facebook</a><br>
+                        <a href="#">Instagram</a><br>
+                        <a href="#">Twitter</a>
+                    </div>
+                    <div class="col-12 col-lg-6 footer__text">
+                        <p>Testimonials shown are based on actual letters received from many of our satisfied customers. Customer testomonial results may not be typical. Individual results may vary. Individuals shown are paid models and not necessarily YOOFORIC customers.</p>
+                        <p>The statements made regarding these products have not been evaluated by the Food and Drug Administration. The efficacy of these products has not been confirmed by FDA-approved research. These products are not intended to diagnose, treat, cure or prevent any disease. All information presented here is not meant as a substitute for or alternative to information from health care practitioners. Please consult your health care professional about potential interactions or other possible complications before using any product. The Federal Food, Drug, and Cosmetic Act require this notice.</p>
+                    </div>
+                    <div class="col-6 col-md-3 col-xl-6 order-4 order-xl-0 footer__nav">
+                        © 2020 YOOFORIC<br>
+                        <a href="#" class="link">Terms&Condition</a>
+                    </div>
+                    <div class="col-6 col-md-3 col-xl-2 footer__nav">
+                        <a href="/catalog.html" class="link">Products</a><br>
+                        <a href="/science.html" class="link">Science</a>
+                    </div>
+                    <div class="col-6 col-md-3 col-xl-2 footer__nav">
+                        <a href="/media.html" class="link">Media</a><br>
+                        <a href="/about.html" class="link">About</a>
+                    </div>
+                    <div class="col-6 col-md-3 col-xl-2 footer__nav">
+                        <a href="/faq.html" class="link">FAQ</a><br>
+                        <a href="/contact.html" class="link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+<div class="popup centered" id="popupFree14">
+    <div class="popup__container">
+        <a href="#" class="popup__close"></a>
+        <div class="scrollbar-outer">
+            <div class="popup__title">14 day risk-free trial $4.95</div>
+            <div class="popup__textContent">
+                <p>With the Free Trial offer, you'll receive one 30 Piece Box – One Month Supply. We know you will want to continue the cumulative healthy effects of YOOFORIC Hemp Oil Infused Gum so every free trial includes complimentary enrollment in our monthly Subscribe & Save Club.</p>
+                <p>At the end of your trial period, you’ll be billed $79.99 for the supply you have received and are keeping. Thereafter, a new 30 Piece Pack will be sent and billed at the special member discounted price of $79.99 plus FREE SHIPPING every thirty (30) days Cancel any time.</p>
+                <p>Here's more great news - EVERY YOOFORIC monthly supply comes with its own 30-Day Money Back Guarantee so there's no risk to your wallet...only rewards to your health!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup centered" id="popupSubscribe">
+    <div class="popup__container">
+        <a href="#" class="popup__close"></a>
+        <div class="scrollbar-outer">
+            <div class="popup__title">Subscribe and Save (15%) $79.99</div>
+            <div class="popup__textContent">
+                <p>As a Subscribe & Save Member, you never have to worry about running out of your YOOFORIC Hemp Oil Chewing Gum.</p>
+                <p>Once your current supply runs out, you'll be automatically shipped your monthly supply every 30 days at the special Member discounted price of $24.99 plus FREE SHIPPING!<br>You are under no obligation to purchase future shipments and you can cancel at any time.</p>
+                <p>Here's more great news - EVERY YOOFORIC monthly supply comes with its own 30-Day Money Back Guarantee so there's no risk to your wallet...only rewards to your health!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup centered" id="popupTry30">
+    <div class="popup__container">
+        <a href="#" class="popup__close"></a>
+        <div class="scrollbar-outer">
+            <div class="popup__title">Try our products for 30 days, Risk Free!</div>
+            <div class="юpopup__textContent scrollbar-outer">Your purchase is protected by our 30 Day Money Back Guarantee (less S/H), so try it with confidence. Money Back Guarantee instructions are included with all shipments.</div>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup centered popup-video" id="videoPopup">
+    <div class="popup__container">
+        <a href="#" class="popup__close"></a>
+        <div class="videoPopup__iframe"></div>
+    </div>
+</div>
+    </body>
+</html>
+</div>

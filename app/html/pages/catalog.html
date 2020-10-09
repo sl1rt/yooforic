@@ -1,0 +1,225 @@
+@@include('../layouts/head.html')
+<div class="whiteBg">
+    @@include('../layouts/header.html')
+
+    <div class="container">
+        <hr class="start">
+        <div class="catalog">
+
+            <div class="catalogFilters">
+                <div class="catalogFilters__title d-none d-xl-block open">Filter <span></span></div>
+                <div class="catalogFilters__list">
+                    <div class="catalogFilters__item">
+                        <label>
+                            <input type="checkbox" name="type" checked value="0">
+                            <div class="checkbox"></div>
+                            <div class="text">All</div>
+                        </label>
+                    </div>
+
+                    <div class="catalogFilters__item">
+                        <label>
+                            <input type="checkbox" name="type" value="1">
+                            <div class="checkbox"></div>
+                            <div class="text">Oil </div>
+                        </label>
+                    </div>
+
+                    <div class="catalogFilters__item">
+                        <label>
+                            <input type="checkbox" name="type" value="2">
+                            <div class="checkbox"></div>
+                            <div class="text">Gum</div>
+                        </label>
+                    </div>
+
+                    <div class="catalogFilters__item">
+                        <label>
+                            <input type="checkbox" name="type" value="3">
+                            <div class="checkbox"></div>
+                            <div class="text">Cream</div>
+                        </label>
+                    </div>
+
+                    <div class="catalogFilters__item">
+                        <label>
+                            <input type="checkbox" name="type" value="4">
+                            <div class="checkbox"></div>
+                            <div class="text">Other</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog__list row">
+                <div class="col-12 col-md-6">
+                    <div  class="productItem beforeanimate productItem-gum">
+                        <a href="/product.html" class="productItem__title">Hemp oil infused chewing gum</a>
+                        <div class="productItem__size">2 sizes</div>
+
+                        <div class="radioBtns">
+
+                            <div class="radioBtns__item">
+                                <label>
+                                    <input type="radio" value="1" name="test" checked>
+                                    <span>10 p.</span>
+                                </label>
+                            </div>
+
+                            <div class="radioBtns__item">
+                                <label>
+                                    <input type="radio" value="1" name="test">
+                                    <span>30 p.</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <a href="/product.html" class="productItem__image">
+                            <picture>
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                <source srcset="images/products/product-1.png, images/products/product-1@2.png 2x">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img src="images/products/product-1.png" alt="My default image">
+                            </picture>
+                        </a>
+
+                        <div class="productItem__buybtn">
+                            <button class="btn btn-dark btn-buy">$79.99</button>
+                        </div>
+
+                        <div class="productItem__subscription">
+                            <a href="#">Subscription price</a>
+                            @@include('../layouts/subpopup.html')
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-none d-md-block">
+                    <div class="productImage beforeanimate">
+                        <picture>
+                            <!--[if IE 9]><video style="display: none;"><![endif]-->
+                            <source srcset="images/products/gum-desktop.jpg, images/products/gum-desktop@2x.jpg 2x" media="(min-width: 1152px)">
+                            <source srcset="images/products/gum-tablet.jpg, images/products/gum-tablet@2x.jpg 2x" media="(max-width: 1151px)">
+                            <!--[if IE 9]></video><![endif]-->
+                            <img src="images/products/gum-desktop.jpg" alt="My default image">
+                        </picture>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-none d-md-block">
+                    <div class="productImage beforeanimate">
+                        <picture>
+                            <!--[if IE 9]><video style="display: none;"><![endif]-->
+                            <source srcset="images/products/oil-desktop.jpg, images/products/oil-desktop@2x.jpg 2x" media="(min-width: 1152px)">
+                            <source srcset="images/products/oil-tablet.jpg, images/products/oil-tablet@2x.jpg 2x" media="(max-width: 1151px)">
+                            <!--[if IE 9]></video><![endif]-->
+                            <img src="images/products/oil-desktop.jpg" alt="My default image">
+                        </picture>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="productItem beforeanimate productItem-oil">
+                        <a href="/product.html" class="productItem__title">100% Organic<br>hemp oil</a>
+                        <div class="radioSelector__title d-none d-xl-block">4 flavors <span></span></div>
+                        <div class="radioSelector">
+
+                            <div class="radioSelector__item">
+                                <label>
+                                    <input type="radio" value="1" name="test2" >
+                                    <span>Lemon</span>
+                                </label>
+                            </div>
+
+                            <div class="radioSelector__item">
+                                <label>
+                                    <input type="radio" value="1" name="test2" checked>
+                                    <span>Peppermint</span>
+                                </label>
+                            </div>
+
+                            <div class="radioSelector__item">
+                                <label>
+                                    <input type="radio" value="1" name="test2">
+                                    <span>Passion fruit</span>
+                                </label>
+                            </div>
+
+                            <div class="radioSelector__item">
+                                <label>
+                                    <input type="radio" value="1" name="test2">
+                                    <span>Chocolate mint</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <a href="/product.html" class="productItem__image">
+                            <picture>
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                <source srcset="images/products/product-2.png, images/products/product-2@2.png 2x">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img src="images/products/product-2.png" alt="My default image">
+                            </picture>
+                        </a>
+
+                        <div class="productItem__buybtn">
+                            <button class="btn btn-dark btn-buy">$79.99</button>
+                        </div>
+
+                        <div class="productItem__subscription">
+                            <a href="#">Subscription price</a>
+                            @@include('../layouts/subpopup.html')
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="productItem beforeanimate productItem-cream">
+                        <a href="/product.html" class="productItem__title">Hemp oil infused<br>cream</a>
+                        <div class="productItem__size">60 ml</div>
+
+                        <a href="/product.html" class="productItem__image">
+                            <picture>
+                                <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                <source srcset="images/products/product-3.png, images/products/product-3@2.png 2x">
+                                <!--[if IE 9]></video><![endif]-->
+                                <img src="images/products/product-3.png" alt="My default image">
+                            </picture>
+                        </a>
+
+                        <div class="productItem__buybtn">
+                            <button class="btn btn-dark btn-buy">$79.99</button>
+                        </div>
+
+                        <div class="productItem__subscription">
+                            <a href="#">Subscription price</a>
+                            @@include('../layouts/subpopup.html')
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-none d-md-block">
+                    <div class="productImage beforeanimate">
+                        <picture>
+                            <!--[if IE 9]><video style="display: none;"><![endif]-->
+                            <source srcset="images/products/cream-desktop.jpg, images/products/cream-desktop@2x.jpg 2x" media="(min-width: 1152px)">
+                            <source srcset="images/products/cream-tablet.jpg, images/products/cream-tablet@2x.jpg 2x" media="(max-width: 1151px)">
+                            <!--[if IE 9]></video><![endif]-->
+                            <img src="images/products/cream-desktop.jpg" alt="My default image">
+                        </picture>
+                    </div>
+                </div>
+                <div class="pagination col-12">
+                    <ul>
+                        <li><a href="#" class="active">1</a></li>
+                        <li><a href="#">2</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        @@include('../layouts/join.html')
+    </div>
+
+    @@include('../layouts/footer.html')
+</div>

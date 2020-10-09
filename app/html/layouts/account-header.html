@@ -1,0 +1,117 @@
+<header class="header header-simple header-account">
+    <div class="container">
+        <div class="header__wrapper">
+
+            <a href="javascript:;" class="menuBtn d-xxl-none">
+                <span>Menu</span>
+                <svg class="d-xl-none" width="22px" height="9px"><use xlink:href="images/sprite.svg#menu-btn"></use></svg>
+                <svg class="d-none d-xl-block" width="10px" height="6px"><use xlink:href="images/sprite.svg#menu-arrow"></use></svg>
+            </a>
+
+            <div class="header__nav">
+                <div class="close"><svg width="17px" height="17px"><use xlink:href="images/sprite.svg#close"></use></svg></div>
+                <ul>
+                    <li><a href="/catalog.html" class="link">Products</a></li>
+                    <li><a href="/science.html" class="link">Science</a></li>
+                    <li><a href="/media.html" class="link">Media</a></li>
+                    <li><a href="/about.html" class="link">About</a></li>
+                    <li><a href="/contact.html" class="link">Contact</a></li>
+                    <li class="d-xl-none"><a href="/faq.html" class="link">FAQ</a></li>
+
+                    <li class="d-xl-none last"><a href="/account.html" class="link">Account</a></li>
+                </ul>
+            </div>
+
+            <div class="header__right">
+                <a href="#" class="d-none d-xl-block link">Products</a>
+                <a href="#" class="d-none d-xl-block link">Jim </a>
+                <a href="/cart.html" class="header__cart">
+                    <div class="count">12</div>
+                    <div class="icon">
+                        <svg class="default" width="23px" height="23px"><use xlink:href="images/sprite.svg#cart"></use></svg>
+                        <svg class="hover" width="23px" height="23px"><use xlink:href="images/sprite.svg#cart-hover"></use></svg>
+                    </div>
+                </a>
+            </div>
+
+            <a href="/" class="header__logo">
+                <img src="images/logo.svg" alt="">
+            </a>
+
+        </div>
+    </div>
+</header>
+
+<div class="cartPopup">
+    <div class="cartPopup__container">
+        <div class="cartPopup__close">
+            <svg width="25px" height="25px"><use xlink:href="images/sprite.svg#close"></use></svg>
+        </div>
+        <div class="cartPopup__title">Your Bag</div>
+        <div class="cartList">
+
+            <a href="#" class="cartItem">
+                <button class="cartItem__remove"><svg width="15px" height="15px"><use xlink:href="images/sprite.svg#close"></use></svg></button>
+                <div class="cartItem__image">
+                    <picture>
+                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                        <source srcset="images/products/gum-tablet.jpg, images/products/gum-tablet@2x.jpg 2x">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img src="images/products/gum-tablet.jpg" alt="My default image">
+                    </picture>
+                </div>
+                <div class="cartItem__content">
+                    <div class="cartItem__title">Hemp oil infused chewing gum</div>
+                    <div class="cartItem__size">10 Pieces</div>
+                    <div class="cartItem__counter">
+                        <div class="countSelector countSelector-cart">
+                            <button class="countSelector__control countSelector__control-minus"><svg width="10px" height="2px"><use xlink:href="images/sprite.svg#minus"></use></svg></button>
+                            <input type="text" name="value" value="1">
+                            <button class="countSelector__control countSelector__control-plus"><svg width="10px" height="10px"><use xlink:href="images/sprite.svg#plus"></use></svg></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cartItem__cost">
+                    $79.99
+                </div>
+            </a>
+
+            <a href="#" class="cartItem">
+                <button class="cartItem__remove"><svg width="15px" height="15px"><use xlink:href="images/sprite.svg#close"></use></svg></button>
+                <div class="cartItem__image">
+                    <picture>
+                        <!--[if IE 9]><video style="display: none;"><![endif]-->
+                        <source srcset="images/products/gum-tablet.jpg, images/products/gum-tablet@2x.jpg 2x">
+                        <!--[if IE 9]></video><![endif]-->
+                        <img src="images/products/gum-tablet.jpg" alt="My default image">
+                    </picture>
+                </div>
+                <div class="cartItem__content">
+                    <div class="cartItem__title">Organic hemp oil</div>
+                    <div class="cartItem__size">Lemon</div>
+                    <div class="cartItem__counter">
+                        <div class="countSelector countSelector-cart">
+                            <button class="countSelector__control countSelector__control-minus"><svg width="10px" height="2px"><use xlink:href="images/sprite.svg#minus"></use></svg></button>
+                            <input type="text" name="value" value="1">
+                            <button class="countSelector__control countSelector__control-plus"><svg width="10px" height="10px"><use xlink:href="images/sprite.svg#plus"></use></svg></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cartItem__cost">
+                    $20
+                </div>
+            </a>
+
+            <div class="cartPopup__code">
+                <input type="text" name="discountcode" placeholder="Discount Code">
+                <button class="apply">Apply <svg class="hover" width="22px" height="16px"><use xlink:href="images/sprite.svg#back-arrow"></use></svg></button>
+            </div>
+
+        </div>
+
+        <div class="cartPopup__bottom">
+            <button class="btn btn-dark">Total $99.99</button>
+            <div class="cartPopup__login">Already have account? <a href="#">Log in</a></div>
+        </div>
+    </div>
+</div>
