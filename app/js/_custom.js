@@ -318,16 +318,16 @@ $(document).ready(function () {
     // popup opening and closing
 
     $(".videoPopup").click(function (){
-        $(".popup").css('z-index','15');
+        $(".popup").css('z-index','150');
         $("html,body").css("overflow",'hidden');
-        $("#videoPopup").show('200').css('z-index','16');
+        $("#videoPopup").show('200').css('z-index','160');
         let iframe = '<iframe src="' + "https://www.youtube.com/embed/" + $(this).attr("href").split("=")[1] + '" width="1245" height="730" frameborder="0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
         $(".videoPopup__iframe").html(iframe);
         return false;
     });
 
     $(".openPopup").click(function (e) {
-        $(".popup").css('z-index','15');
+        $(".popup").css('z-index','150');
         $("html,body").css("overflow",'hidden');
         $("#" + $(this).data('popup')).fadeIn('200');
         // if($(".popup").is(":visible"))

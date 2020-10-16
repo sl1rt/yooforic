@@ -16,6 +16,10 @@
     opacity: 0;
   }
 
+  &::after{
+    display: none !important;
+  }
+
   @media (hover:hover){
     &:hover::before{
       width: 100%;
